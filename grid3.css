@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.items{
+    border: 3px solid red;
+}
+
+.container{
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    text-align: center;
+    grid-template-areas:
+    "a a a a  a a a a  a a a a"
+    "b b b b  b b b b  c c c c"
+    "b b b b  b b b b  c c c c";
+}
+
+.itemA{
+    grid-area: a;
+}
+
+.itemB{
+    grid-area: b;
+}
+
+.itemC{
+    grid-area: c;
+}
+
+@media screen and (max-width: 550px){
+    .container{
+        grid-template-areas: 
+        "a a a a  a a a a  a a a a"
+        "b b b b  b b b b  b b b b"
+        "b b b b  b b b b  b b b b"
+        "c c c c  c c c c  c c c c";
+    }
+}

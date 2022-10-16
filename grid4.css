@@ -1,0 +1,52 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.items{
+    border: 3px solid red;
+}
+
+.container{
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    text-align: center;
+    grid-template-areas: 
+    "a a a a  a a a a  a a a a"
+    "b b b b  b b b b  e e e e"
+    "c c c c  d d d d  e e e e"
+    ;
+}
+
+.box-1{
+    grid-area: a;
+}
+.box-2{
+    grid-area: b;
+}
+.box-3{
+    grid-area: c;
+}
+.box-4{
+    grid-area: d;
+}
+.box-5{
+    grid-area: e;
+}
+
+@media screen and (max-width: 550px){
+    .container{
+        grid-template-areas: 
+        "a a a a  a a a a  a a a a"
+        "b b b b  b b b b  b b b b"
+        "b b b b  b b b b  b b b b"
+        "c c c c  c c d d  d d d d"
+        "e e e e  e e e e  e e e e"
+        ;
+    }
+}
